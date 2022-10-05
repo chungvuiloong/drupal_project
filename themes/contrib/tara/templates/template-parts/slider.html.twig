@@ -1,0 +1,64 @@
+{{ attach_library('tara/slider') }}
+<section id="slider">
+  <div class="container">
+    <div class="testing">MrJay's 7 feelings</div><div>Testing</div>
+    <ul class="owl-carousel home-slider">
+      {% if slider_code != '' %}
+        {{ slider_code | striptags('<ol>,<ul>,<li>,<p>,<a>,<img>,<video>,<h1>,<h2>,<h3>,<h4>,<h5>,<h6>,<em>,<strong>,<br>,<i>,<div>,<span>,<button>') | raw }}
+      {% else %}
+      <li>
+        <h1>Love</h1>
+        <p>MrJay's Lovey Dovey-ness</p>
+        <br />
+        <a class="button" href="#">read more</a>
+      </li>
+
+      <li>
+        <h1>Hungry</h1>
+        <p>Keep your food away from me!</p>
+        <br />
+        <a class="button" href="#">read more</a>
+      </li>
+
+      <li>
+        <h1>Greed</h1>
+        <p>More is just not enough!</p>
+        <br />
+        <a class="button" href="#">read more</a>
+      </li>
+
+      <li>
+        <h1>Lazy</h1>
+        <p>I am so lazy</p>
+        <br />
+        <p>I will automate my work soon.</p>
+        <br />
+        <a class="button" href="#">read more</a>
+      </li>
+
+      <li>
+        <h1>Anger</h1>
+        <p>You don't want that!</p>
+        <br />
+        <a class="button" href="#">read more</a>
+      </li>
+      <li>
+        <h1>Envy</h1>
+        <p>I envy your code</p>
+        <br />
+        <p>I will fork it later!</p>
+        <br />
+        <a class="button" href="#">read more</a>
+      </li>
+      <li>
+        <h1>Proud</h1>
+        <p>I am different! Proud of it!</p> 
+        <br />
+        <a class="button" href="#">read more</a>
+      </li>
+    
+      
+      {% endif %}
+    </ul> <!--/.home-slider -->
+  </div>
+</section>
